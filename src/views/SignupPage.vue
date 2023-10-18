@@ -12,7 +12,7 @@
 
         <div class="flex flex-col gap-2 mb-10">
           <h1 class="text-3xl font-bold">FlowSummit</h1>
-          <p>aaaaaaaaaaaaaaaaaaa</p>
+          <p></p>
         </div>
 
         <div class="flex flex-col gap-4">
@@ -36,7 +36,7 @@
 
         <div class="flex flex-col gap-6">
           <ion-button class="w-full h-14">Registrar</ion-button>
-          <p>aaaaaaaaaaaaaaaa</p>
+          <p></p>
         </div>
 
       </div>
