@@ -31,24 +31,3 @@
     </ion-card-content>
   </ion-card>
 </template>
-
-<script lang="ts">
-import {
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
-} from "@ionic/vue";
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  components: {
-    IonCard,
-    IonCardContent,
-    IonCardHeader,
-    IonCardSubtitle,
-    IonCardTitle,
-  },
-});
-</script>
