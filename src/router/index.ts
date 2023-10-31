@@ -7,7 +7,7 @@ import SignupPage from '@/views/SignupPage.vue';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/register'
+    redirect: '/login'
   },
   {
     path: '/home',
@@ -20,8 +20,8 @@ const routes: Array<RouteRecordRaw> = [
     component: LoginPage
   },
   {
-    path: '/register',
-    name: 'Register',
+    path: '/cadastro',
+    name: 'cadastro',
     component: SignupPage
   },
 ]
