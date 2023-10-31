@@ -1,15 +1,17 @@
 <template>
-  <SubHeader />
-
-  <ion-page id="main-content">
-    <Header />
-
-    <ion-content :fullscreen="true">
-      <div id="container">
-        <CardList />
-      </div>
-    </ion-content>
-  </ion-page>
+  <section>
+    <SubHeader />
+  
+    <ion-page id="main-content">
+      <Header />
+  
+      <ion-content :fullscreen="true">
+        <div id="container">
+          <CardList />
+        </div>
+      </ion-content>
+    </ion-page>
+  </section>
 </template>
 
 <script setup lang="ts">
