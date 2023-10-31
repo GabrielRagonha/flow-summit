@@ -9,5 +9,7 @@
 </template>
 
 <script setup lang="ts">
+import { IonGrid, IonRow, IonCol } from "@ionic/vue";
+
 import Card from "../components/Card.vue";
 </script>

@@ -15,24 +15,24 @@
 
         <div class="flex flex-col gap-4">
           <ion-item>
-            <ion-label>Nome</ion-label>
-            <ion-input type="text" placeholder="No mínimo 8 caracteres" :required="true" v-model="name" />
+            <ion-input type="text" label="Nome" placeholder="No mínimo 8 caracteres" :required="true" v-model="name" />
           </ion-item>
 
           <ion-item>
-            <ion-label>Email</ion-label>
-            <ion-input type="email" placeholder="No mínimo 8 caracteres" :required="true" v-model="email" />
+            <ion-input type="email" label="Email" placeholder="No mínimo 8 caracteres" :required="true" v-model="email" />
           </ion-item>
 
           <ion-item>
-            <ion-label>Senha</ion-label>
-            <ion-input type="password" placeholder="No mínimo 8 caracteres" :required="true" v-model="pass" />
+            <ion-input type="password" label="Senha" placeholder="No mínimo 8 caracteres" :required="true" v-model="pass" />
           </ion-item>
         </div>
 
-        <div class="flex flex-col gap-6">
-          <button fill="outline" color="dark" type="submit" class="w-full h-14">Registrar</button>
-          <p></p>
+        <div class="flex flex-col gap-4">
+          <ion-button fill="outline" color="dark" type="submit" class="w-full h-14">Registrar</ion-button>
+          
+          <p class="mb-5">Já possui um cadastro? 
+            <a href="/login" class="underline">Entre agora!</a>
+          </p>
         </div>
       </form>
     </ion-content>
@@ -43,6 +43,8 @@
 import {
   IonContent,
   IonHeader,
+  IonButton,
+  IonItem,
   IonPage,
   IonTitle,
   IonToolbar,
