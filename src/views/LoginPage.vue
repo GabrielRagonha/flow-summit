@@ -1,12 +1,6 @@
 <template>
   <ion-page>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
       <form
         class="h-full w-full flex flex-col py-10 px-4 text-center gap-8 justify-start"
         @submit.prevent="handleLogin()"

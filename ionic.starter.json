@@ -1,5 +1,5 @@
 {
-  "name": "Blank Starter",
+  "name": "FlowSummit",
   "baseref": "main",
   "tarignore": [
     "node_modules",
