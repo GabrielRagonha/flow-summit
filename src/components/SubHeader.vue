@@ -2,7 +2,7 @@
   <ion-menu side="end" content-id="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Conteúdo do submenu</ion-title>
+        <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
   </ion-menu>

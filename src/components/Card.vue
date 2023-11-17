@@ -1,17 +1,17 @@
 <template>
   <ion-card>
-    <img alt="{{ props.project.name }}" src="https://picsum.photos/1000" />
+    <img alt="{{ props.event.name }}" src="https://picsum.photos/1000" />
 
     <ion-card-header>
-      <ion-card-title>{{ props.project.name }}</ion-card-title>
+      <ion-card-title>{{ props.event.name }}</ion-card-title>
       <ion-card-subtitle>
-        Começo: {{ toDate(props.project.startDate) }} <br>
-        Fim: {{ toDate(props.project.endDate) }}
+        Começo: {{ toDate(props.event.startDate) }} <br>
+        Fim: {{ toDate(props.event.endDate) }}
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      {{ props.project.description }}
+      {{ props.event.description }}
     </ion-card-content>
   </ion-card>
 </template>
@@ -25,7 +25,7 @@ import {
   IonCardSubtitle,
 } from "@ionic/vue";
 
-const props = defineProps(["project"]);
+const props = defineProps(["event"]);
 
 function toDate(dateString: string) {
   const date = new Date(dateString);

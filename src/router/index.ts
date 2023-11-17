@@ -4,7 +4,7 @@ import HomePage from '../views/HomePage.vue'
 import LoginPage from '@/views/LoginPage.vue';
 import SignupPage from '@/views/SignupPage.vue';
 import EventPage from '@/views/EventPage.vue';
-
+import EventCreatePage from '@/views/EventCreatePage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,13 +23,18 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/cadastro',
-    name: 'cadastro',
+    name: 'Cadastro',
     component: SignupPage
   },
   {
     path: '/evento',
     name: 'evento',
     component: EventPage
+  },
+  {
+    path: '/novo-evento',
+    name: 'Novo evento',
+    component: EventCreatePage
   },
 ]
 

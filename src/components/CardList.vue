@@ -1,11 +1,11 @@
 <template>
-  <ion-grid v-if="props.projects.length !== 0">
+  <ion-grid v-if="props.events.length !== 0">
     <ion-row>
       <ion-col>
         <Card
-          v-for="(project, index) in props.projects"
+          v-for="(event, index) in props.events"
           :key="index"
-          :project="project"
+          :event="event"
         />
       </ion-col>
     </ion-row>
@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import { IonGrid, IonRow, IonCol } from "@ionic/vue";
 
-const props = defineProps(["projects"]);
+const props = defineProps(["events"]);
 
 import Card from "../components/Card.vue";
 </script>
