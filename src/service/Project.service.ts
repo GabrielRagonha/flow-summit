@@ -5,9 +5,7 @@ export async function getProjects() {
   try {
     const httpService = new HttpService();
 
-    const result = await httpService.get<ProjectResponse>("events_all");
-
-    console.log("Service:", result);    
+    return await httpService.get<ProjectResponse>("events_all");
   } catch (error: any) {
     console.error("Erro: ", error.message);
   }
