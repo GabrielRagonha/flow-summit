@@ -7,58 +7,30 @@
 
       <ion-content :fullscreen="true">
         <div id="container">
-          <form
-            class="h-full w-full flex flex-col py-10 px-4 text-center gap-8 justify-start"
-            @submit.prevent="handleNewEvent()"
-          >
+          <form class="h-full w-full flex flex-col py-10 px-4 text-center gap-8 justify-start"
+            @submit.prevent="handleNewEvent()">
             <div class="flex flex-col gap-4">
               <ion-item>
-                <ion-input
-                  type="text"
-                  label="Nome do evento"
-                  placeholder="Insira o nome do evento"
-                  :required="true"
-                  v-model="newEvent.name"
-                />
+                <ion-input type="text" label="Nome do evento" placeholder="Insira o nome do evento" :required="true"
+                  v-model="newEvent.name" />
               </ion-item>
 
               <ion-item>
-                <ion-input
-                  type="text"
-                  label="Descrição do evento"
-                  placeholder="Insira a descrição do evento"
-                  :required="true"
-                  v-model="newEvent.description"
-                />
+                <ion-input type="text" label="Descrição do evento" placeholder="Insira a descrição do evento"
+                  :required="true" v-model="newEvent.description" />
               </ion-item>
 
               <ion-item>
-                <ion-input
-                  type="datetime-local"
-                  label="Ínicio"
-                  :required="true"
-                  v-model="newEvent.startDate"
-                />
+                <ion-input type="datetime-local" label="Ínicio" :required="true" v-model="newEvent.startDate" />
               </ion-item>
 
               <ion-item>
-                <ion-input
-                  type="datetime-local"
-                  label="Fim"
-                  :required="true"
-                  v-model="newEvent.endDate"
-                />
+                <ion-input type="datetime-local" label="Fim" :required="true" v-model="newEvent.endDate" />
               </ion-item>
             </div>
 
             <div class="flex flex-col gap-4">
-              <ion-button
-                fill="outline"
-                color="dark"
-                class="w-full h-14"
-                type="submit"
-                >Criar</ion-button
-              >
+              <ion-button fill="outline" color="dark" class="w-full h-14" type="submit">Criar</ion-button>
             </div>
           </form>
         </div>
