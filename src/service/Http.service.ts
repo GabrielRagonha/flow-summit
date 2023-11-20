@@ -5,7 +5,8 @@ export class HttpService {
       method: "POST",
       body: JSON.stringify(body),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authentication": `Bearer ${localStorage.token}`
       }
     })
 
@@ -20,7 +21,8 @@ export class HttpService {
     const rawResponse = await fetch(this.baseUrl + url, {
       method: "GET",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authentication": `Bearer ${localStorage.token}`
       }
     })
 
