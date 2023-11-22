@@ -9,17 +9,20 @@ export async function createEvent(data: any) {
     const coordinator = await getCoordinator();
 
     const formData = {
+      idCoordinator: coordinator.idCoordinator,
       name: data.value.name,
       description: data.value.description,
-      startDate: new Date(data.value.startDate).setUTCHours(0, 0, 0, 0) && new Date(data.value.startDate).toISOString(),
-      endDate: new Date(data.value.endDate).setUTCHours(0, 0, 0, 0) && new Date(data.value.endDate).toISOString(),
-      idCoordinator: coordinator.idCoordinator || "4f874f88-66c0-4645-964c-7500aa62dad1",
+      startDate:
+        new Date(data.value.startDate).setUTCHours(0, 0, 0, 0) &&
+        new Date(data.value.startDate).toISOString(),
+      endDate:
+        new Date(data.value.endDate).setUTCHours(0, 0, 0, 0) &&
+        new Date(data.value.endDate).toISOString(),
     };
 
-    return await httpService.post<EventResponse>(
-      "events",
-      formData
-    );
+    console.log(formData);
+
+    return await httpService.post<EventResponse>("events", formData);
   } catch (error: any) {
     console.error("Erro: ", error.message);
   }

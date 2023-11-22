@@ -6,7 +6,7 @@ export class HttpService {
       body: JSON.stringify(body),
       headers: {
         "Content-Type": "application/json",
-        "Authentication": `Bearer ${localStorage.token}`
+        "Authorization": `Bearer ${localStorage.token}`
       }
     })
 
@@ -22,7 +22,7 @@ export class HttpService {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authentication": `Bearer ${localStorage.token}`
+        "Authorization": `Bearer ${localStorage.token}`
       }
     })
 
