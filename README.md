@@ -30,3 +30,4 @@ Para rodar o projeto, execute o seguinte comando:
 - [@GabrielRagonha](https://github.com/GabrielRagonha)
 - [@LuisFelipeMod](https://github.com/LuisFelipeMod)
 - [@Marcelo-maga](https://github.com/Marcelo-maga)
+- [@StenioIgnacio](https://github.com/StenioIgnacio)
