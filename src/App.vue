@@ -1,4 +1,4 @@
-<template>
+<template class="light">
   <ion-app>
     <ion-router-outlet />
   </ion-app>
