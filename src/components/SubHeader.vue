@@ -22,6 +22,7 @@
 
         <button
           class="bg-[#cf1d1d] shadow p-2 rounded-md flex items-center justify-center w-full text-white active:bg-[#cf1d1de6] hover:bg-[#cf1d1de6] transition-all"
+          @click.prevent="handleLogout()"
         >
           Logout
         </button>
@@ -38,4 +39,11 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/vue";
+
+function handleLogout() {
+  localStorage.removeItem("token")
+  localStorage.removeItem("user")
+
+  location.reload();
+}
 </script>
