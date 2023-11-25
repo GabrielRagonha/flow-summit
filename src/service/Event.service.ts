@@ -41,3 +41,16 @@ export async function getEvent(eventId: any) {
     console.error("Erro: ", error.message);
   }
 }
+
+export async function confirmEvent(data: any) {
+  try {
+    const formData = {
+      idUser: data.idUser,
+      idEvent: data.idEvent 
+    };
+
+    return await httpService.post("schedules/", formData);
+  } catch (error: any) {
+    console.error("Erro: ", error.message);
+  }
+}
