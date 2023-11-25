@@ -56,6 +56,10 @@ router.beforeEach((to, from, next) => {
     return next('/login');
   }
 
+  if (loggedIn && publicPages.includes(to.path)) {
+    return next('/home');
+  }
+
   next();
 });
 
