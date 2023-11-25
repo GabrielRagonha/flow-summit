@@ -17,14 +17,15 @@
           </ion-item>
 
           <ion-item>
-            <ion-input type="password" label="Senha" placeholder="No mínimo 8 caracteres" :required="true" v-model="pass" />
+            <ion-input type="password" label="Senha" placeholder="No mínimo 8 caracteres" :required="true"
+              v-model="pass" />
           </ion-item>
         </div>
 
         <div class="flex flex-col gap-4">
           <ion-button fill="outline" color="dark" type="submit" class="w-full h-14">Registrar</ion-button>
-          
-          <p class="mb-5">Já possui um cadastro? 
+
+          <p class="mb-5">Já possui um cadastro?
             <a href="/login" class="underline">Entre agora!</a>
           </p>
         </div>
@@ -70,7 +71,7 @@ async function handleSignup() {
     result.status === 200 && router.push("/login");
 
   } catch (error: any) {
-    console.error("Deu erro: ", error.message)
+    console.error("Erro: ", error.message)
   }
 }
 
