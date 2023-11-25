@@ -20,8 +20,6 @@ export async function createEvent(data: any) {
         new Date(data.value.endDate).toISOString(),
     };
 
-    console.log(formData);
-
     return await httpService.post<EventResponse>("events", formData);
   } catch (error: any) {
     console.error("Erro: ", error.message);
@@ -31,6 +29,14 @@ export async function createEvent(data: any) {
 export async function getEvents() {
   try {
     return await httpService.get<EventResponse>("events_all");
+  } catch (error: any) {
+    console.error("Erro: ", error.message);
+  }
+}
+
+export async function getEvent(eventId: any) {
+  try {
+    return await httpService.get<EventResponse>("events/" + eventId);
   } catch (error: any) {
     console.error("Erro: ", error.message);
   }
