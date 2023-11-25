@@ -1,7 +1,7 @@
 <template>
   <ion-card>
     <a v-bind:href="url">
-      <img v-bind:alt="props.event.name" src="https://picsum.photos/1000" />
+      <img v-bind:alt="'Imagem do evento ' + props.event.name" src="https://picsum.photos/1000" />
 
       <ion-card-header>
         <ion-card-title>{{ props.event.name }}</ion-card-title>
