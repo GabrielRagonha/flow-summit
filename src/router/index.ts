@@ -5,6 +5,7 @@ import LoginPage from '@/views/LoginPage.vue';
 import SignupPage from '@/views/SignupPage.vue';
 import EventPage from '@/views/EventPage.vue';
 import EventCreatePage from '@/views/EventCreatePage.vue';
+import ProfilePage from '@/views/ProfilePage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -35,6 +36,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/novo-evento',
     name: 'Novo evento',
     component: EventCreatePage
+  },
+  {
+    path: '/perfil',
+    name: 'Perfil',
+    component: ProfilePage
   },
   {
     path: "/:caminho(.*)",
