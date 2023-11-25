@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import HomePage from '../views/HomePage.vue'
+import HomePage from '@/views/HomePage.vue'
 import LoginPage from '@/views/LoginPage.vue';
 import SignupPage from '@/views/SignupPage.vue';
 import EventPage from '@/views/EventPage.vue';
@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
     component: SignupPage
   },
   {
-    path: '/evento',
+    path: '/eventos/:eventName',
     name: 'evento',
     component: EventPage
   },
@@ -36,6 +36,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Novo evento',
     component: EventCreatePage
   },
+  {
+    path: "/:caminho(.*)",
+    component: HomePage
+  }
 ]
 
 const router = createRouter({

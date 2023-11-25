@@ -47,8 +47,19 @@
 <script lang="ts">
 import { IonBackButton, IonButton, IonButtons, IonIcon, IonMenuButton, IonTitle, IonToolbar } from '@ionic/vue';
 import { create, ellipsisHorizontal, ellipsisVertical, helpCircle, search, personCircle, star } from 'ionicons/icons';
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
+import { getEvent } from "@/service/Event.service";
 import EventItem from "../components/EventItem.vue";
+
+onMounted(async () => {
+    try {
+        const response = await getEvent("teste");
+
+        console.log(response)
+    } catch (error) {
+        console.error("Erro:", error);
+    }
+});
 
 export default defineComponent({
     components: { IonBackButton, IonButton, IonButtons, IonIcon, IonMenuButton, IonTitle, IonToolbar },

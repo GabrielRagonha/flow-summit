@@ -1,18 +1,20 @@
 <template>
   <ion-card>
-    <img alt="{{ props.event.name }}" src="https://picsum.photos/1000" />
+    <a v-bind:href="url">
+      <img v-bind:alt="props.event.name" src="https://picsum.photos/1000" />
 
-    <ion-card-header>
-      <ion-card-title>{{ props.event.name }}</ion-card-title>
-      <ion-card-subtitle>
-        Começo: {{ toDate(props.event.startDate) }} <br>
-        Fim: {{ toDate(props.event.endDate) }}
-      </ion-card-subtitle>
-    </ion-card-header>
+      <ion-card-header>
+        <ion-card-title>{{ props.event.name }}</ion-card-title>
+        <ion-card-subtitle>
+          Começo: {{ toDate(props.event.startDate) }} <br>
+          Fim: {{ toDate(props.event.endDate) }}
+        </ion-card-subtitle>
+      </ion-card-header>
 
-    <ion-card-content>
-      {{ props.event.description }}
-    </ion-card-content>
+      <ion-card-content>
+        {{ props.event.description }}
+      </ion-card-content>
+    </a>
   </ion-card>
 </template>
 
@@ -26,6 +28,8 @@ import {
 } from "@ionic/vue";
 
 const props = defineProps(["event"]);
+
+const url = "/eventos/" + props.event.idEvent;
 
 function toDate(dateString: string) {
   const date = new Date(dateString);

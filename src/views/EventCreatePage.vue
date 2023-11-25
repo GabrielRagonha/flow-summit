@@ -42,6 +42,7 @@
 <script setup lang="ts">
 import { IonContent, IonItem, IonButton, IonPage, IonInput } from "@ionic/vue";
 
+import router from "@/router";
 import { ref } from "vue";
 import { createEvent } from "@/service/Event.service";
 import { EventResponse } from "@/interfaces/EventResponse";
@@ -58,6 +59,8 @@ const newEvent = ref<EventResponse>({
 async function handleNewEvent() {
   try {
     await createEvent(newEvent);
+
+    router.push("/home")
   } catch (error) {
     console.error("Erro:", error);
   }
