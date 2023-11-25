@@ -10,10 +10,8 @@ export async function getCoordinator() {
     const response = await httpService.get(
       `user_coodinator/${user.idUser}`,
     );
-    
-    const { coordinator } = response.data
 
-    console.log(coordinator);
+    const { coordinator } = response.data
 
     return coordinator;
 
