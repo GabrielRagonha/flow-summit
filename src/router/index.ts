@@ -5,6 +5,7 @@ import LoginPage from '@/views/LoginPage.vue';
 import SignupPage from '@/views/SignupPage.vue';
 import EventPage from '@/views/EventPage.vue';
 import EventCreatePage from '@/views/EventCreatePage.vue';
+import ProfilePage from '@/views/ProfilePage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -37,6 +38,11 @@ const routes: Array<RouteRecordRaw> = [
     component: EventCreatePage
   },
   {
+    path: '/perfil',
+    name: 'Perfil',
+    component: ProfilePage
+  },
+  {
     path: "/:caminho(.*)",
     component: HomePage
   }
@@ -54,6 +60,10 @@ router.beforeEach((to, from, next) => {
 
   if (authRequired && !loggedIn) {
     return next('/login');
+  }
+
+  if (loggedIn && publicPages.includes(to.path)) {
+    return next('/home');
   }
 
   next();
