@@ -8,8 +8,8 @@
   </ion-grid>
 
   <div v-else class="h-[91.5vh] flex justify-center items-center">
-    <p class="text-center max-w-[95%]">
-      Nenhum projeto está disponível no momento =(
+    <p class="text-center max-w-[95%] font-bold ">
+      Nenhum evento foi encontrado😭
     </p>
   </div>
 </template>

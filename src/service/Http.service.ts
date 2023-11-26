@@ -1,3 +1,5 @@
+import router from "@/router";
+
 export class HttpService {
   private baseUrl = "http://localhost:3000/"
   public async post<T>(url: string, body: any): Promise<{ status: number, data: T }> {
@@ -27,6 +29,12 @@ export class HttpService {
     })
 
     const { status } = rawResponse
+
+    if(status === 406) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      router.push("/login");
+    }
 
     const response = await rawResponse.json()
 

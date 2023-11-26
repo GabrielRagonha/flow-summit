@@ -19,7 +19,7 @@
         </div>
 
         <div class="flex flex-col gap-4">
-          <ion-button fill="outline" color="dark" class="w-full h-14" type="submit">Entrar</ion-button>
+          <button class="w-full h-14 text-white font-bold bg-[#F97316] rounded-lg" fill="outline" color="dark" type="submit">Entrar</button>
           <p class="mb-5">Não possui um cadastro?
             <a href="/cadastro" class="underline">Faça agora!</a>
           </p>
