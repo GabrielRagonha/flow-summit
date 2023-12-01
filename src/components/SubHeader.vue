@@ -14,7 +14,7 @@
             class="bg-[#F97316] shadow p-2 rounded-md flex items-center justify-center w-full text-white active:bg-[#f97316e6] hover:bg-[#f97316e6] transition-all">Criar
             novo evento</a>
 
-          <a href="#"
+          <a href="/perfil"
             class="bg-[#F97316] shadow p-2 rounded-md flex items-center justify-center w-full text-white active:bg-[#f97316e6] hover:bg-[#f97316e6] transition-all">Ver
             perfil</a>
         </div>

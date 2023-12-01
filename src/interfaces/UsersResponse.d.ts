@@ -11,3 +11,11 @@ export interface Coordinator {
   idUser: string
   institution: string
 }
+
+export interface Schedules {
+  idScheduleUser: string;
+  idUser: string;
+  idEvent: string;
+  createdAt: string;
+  updatedAt: string;
+}
