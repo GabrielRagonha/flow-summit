@@ -4,14 +4,14 @@
       <img v-bind:alt="'Imagem do evento ' + props.event.name" src="https://picsum.photos/1000" />
 
       <ion-card-header>
-        <ion-card-title>{{ props.event.name }}</ion-card-title>
+        <ion-card-title class="line-clamp-2">{{ props.event.name }}</ion-card-title>
         <ion-card-subtitle>
           Começo: {{ toDate(props.event.startDate) }} <br>
           Fim: {{ toDate(props.event.endDate) }}
         </ion-card-subtitle>
       </ion-card-header>
 
-      <ion-card-content>
+      <ion-card-content class="line-clamp-4 p-0 mb-5 mx-4">
         {{ props.event.description }}
       </ion-card-content>
     </a>

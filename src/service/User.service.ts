@@ -1,4 +1,4 @@
-import { Coordinator } from "@/interfaces/UsersResponse";
+import { Coordinator, Schedules } from "@/interfaces/UsersResponse";
 import { HttpService } from "@/service/Http.service";
 
 const httpService = new HttpService();
@@ -15,14 +15,6 @@ export async function getCoordinator() {
   } catch (error: any) {
     throw new error(error.message);
   }
-}
-
-export interface Schedules {
-  idScheduleUser: string;
-  idUser: string;
-  idEvent: string;
-  createdAt: string;
-  updatedAt: string;
 }
 
 export async function getSchedule() {
